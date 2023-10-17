@@ -1,5 +1,6 @@
 # Valorant-Instalocker
 In this repository you can find a valorant instalocker that automatically locks your agents for you
+It was created in Python and the only requirement you need except having Python installed is "pyautogui" because this detects pictures of your agents and clicks on them
 
 Step 1: Run "tracker" to get the Middle of the Lock button location and write it in "box_coords.txt" (X first row, Y second row)
 Step 2: Take a Screenshot of the Agent Select Screen in Fullscreen and save it while no agent is chosen yet (I recommend doing this in a private match)
