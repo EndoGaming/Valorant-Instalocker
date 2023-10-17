@@ -9,7 +9,7 @@ Step 2: Take a Screenshot of the Agent Select Screen in Fullscreen and save it w
 
 Step 3: Add every Agent in "agent_names.txt" (Preferably in alphabetical order but not necessary)
 
-Step 4: Save a Screenshot of the agents you want to use (or all of them) with their name written in lowercase in this folder, for example: reyna.png
+Step 4: Save a Screenshot of the agents you want to use (or all of them) with their name written in lowercase in this folder, for example: reyna.png (Should look like the agent example)
 
 Step 5: Start "tracker_for_locker" while having the Screenshot of the Agent Select Screen opened in Fullscreen and wait till it closes automatically (may take a minute for slower PCs)
 
