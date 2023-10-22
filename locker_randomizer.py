@@ -80,7 +80,7 @@ def start_menu():
     os.system("cls") 
     print("Program running...")
     agent = random.choice(actual_list)
-    return agent.lower()
+    return agent
 
 agent_selected = start_menu()
 
