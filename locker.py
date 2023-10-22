@@ -100,7 +100,7 @@ try:
             location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             pyautogui.click(location_x, location_y)
-            pyautogui.moveTo(box_coords[0], box_coords[1], 0.001)
+            pyautogui.moveTo(box_coords[0], box_coords[1])
             pyautogui.click()
 except KeyboardInterrupt:
     print("\nProgram stopped!\n")
