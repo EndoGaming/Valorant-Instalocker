@@ -5,7 +5,7 @@ with open("agent_names.txt", "r") as file:
 for i in range(len(agent_list)):
     for n in range(len(agent_list[i])):
         if agent_list[i][n] == "\n":
-            agent_list[i] = agent_list[i][:n]
+            agent_list[i] = agent_list[i][:n].lower()
             break
 
 timer = 3
