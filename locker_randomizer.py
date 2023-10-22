@@ -8,7 +8,7 @@ with open("agent_names.txt", "r") as file:
 for i in range(len(list)):
     for n in range(len(list[i])):
         if list[i][n] == "\n":
-            list[i] = list[i][:n]
+            list[i] = list[i][:n].lower()
             break
 
 with open("box_coords.txt", "r") as file:
