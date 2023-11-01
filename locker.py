@@ -88,17 +88,19 @@ while True:
             os.system("cls")
             print("You've chosen KAY/O!\n")
             print("Program running...")
+            location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
+            location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             break
         else:
             os.system("cls")  
             print("You've chosen " + agent_selected.title() + "!\n")
             print("Program running...")
+            location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
+            location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             break
 try:
     while True:
         if pyautogui.locateOnScreen(agent_selected + ".png", confidence= 0.9, region=(int(agent_list[agent_selected][0]), int(agent_list[agent_selected][1]), int(agent_list[agent_selected][2]), int(agent_list[agent_selected][3]))):
-            location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
-            location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             pyautogui.click(location_x, location_y)
             pyautogui.moveTo(box_coords[0], box_coords[1])
             pyautogui.click()
