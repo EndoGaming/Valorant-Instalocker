@@ -76,35 +76,33 @@ def start_menu():
     agent = input("Choose Agent: ")
     return agent.lower()
 
-agent_selected = start_menu()
+def use():
+    agent_selected = start_menu()
 
-while True:
-    if agent_selected not in agent_list:
-        os.system("cls")
-        print(f"{agent_selected} is invalid!\n")
-        agent_selected = start_menu()
-    else:
-        if agent_selected == "kayo":
+    while True:
+        if agent_selected not in agent_list:
             os.system("cls")
-            print("You've chosen KAY/O!\n")
-            print("Program running...")
-            location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
-            location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
-            break
+            print(f"{agent_selected} is invalid!\n")
+            agent_selected = start_menu()
         else:
             os.system("cls")  
             print("You've chosen " + agent_selected.title() + "!\n")
             print("Program running...")
+            print("To select a new Agent press CTRL + C")
             location_x = int(agent_list[agent_selected][0]) + 40 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             location_y = int(agent_list[agent_selected][1]) + 35 # Muss maybe angepasst werden bei Änderungen am Gamedesign
             break
-try:
     while True:
         if pyautogui.locateOnScreen(agent_selected + ".png", confidence= 0.9, region=(int(agent_list[agent_selected][0]), int(agent_list[agent_selected][1]), int(agent_list[agent_selected][2]), int(agent_list[agent_selected][3]))):
             pyautogui.click(location_x, location_y)
             pyautogui.moveTo(box_coords[0], box_coords[1])
             pyautogui.click()
-except KeyboardInterrupt:
-    print("\nProgram stopped!\n")
-except Exception as err:
-    print(err)
+
+while True:
+    try:
+        use()
+    except KeyboardInterrupt:
+        os.system("cls")
+        continue
+    except Exception as err:
+        print(err)
